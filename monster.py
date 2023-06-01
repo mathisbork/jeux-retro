@@ -40,7 +40,7 @@ class Monster(animation.AnimateSprite):
 
     def set_speed(self, speed):
         self.default_speed = speed
-        self.velocity = random.randint(2, 5)
+        self.velocity = 1
 
     def set_loot_amount(self, amount):
         self.loot_amount = amount
@@ -89,7 +89,7 @@ class Monster(animation.AnimateSprite):
 #definir une class pour le monstre 1
 class ennemi1(Monster):
     def __init__(self, game):
-        super().__init__(game, "enemie 1", (255,255))
+        super().__init__(game, "enemie 1", (40,40))
         self.set_speed(1)
         self.set_loot_amount(20)
 
@@ -97,7 +97,7 @@ class ennemi1(Monster):
 #definir une seconde classe de monstre
 class ennemi2(Monster):
     def __init__(self, game):
-        super().__init__(game, "enemie 2", (255,255))
+        super().__init__(game, "enemie 2", (40,40))
         self.health = 1
         self.max_health = 1
         self.attack = 3
@@ -106,7 +106,7 @@ class ennemi2(Monster):
 
 class Boss(Monster):
     def __init__(self, game):
-        super().__init__(game, "enemie 3", (400,400), 150)
+        super().__init__(game, "enemie 3", (40,40), 150)
         self.health = 1
         self.max_health = 1
         self.attack = 3
@@ -116,7 +116,7 @@ class Boss(Monster):
 
 class guard(Monster):
     def __init__(self, game):
-        super().__init__(game, "enemie 4", (255,255))
+        super().__init__(game, "enemie 4", (40,40))
         self.health = 1
         self.max_health = 1
         self.attack = 2
@@ -127,17 +127,17 @@ class guard(Monster):
 
 class ennemi4(Monster):
     def __init__(self, game):
-        super().__init__(game, "enemie 5", (400,400), 130)
+        super().__init__(game, "enemie 5", (40,40), 130)
         self.health = 1
         self.max_health = 1
-        self.attack = 2
+        self.attack = 1
         self.set_speed(1)
         self.set_loot_amount(50)
 
 
 class ennemi3(Monster):
     def __init__(self, game):
-        super().__init__(game, "enemie 6", (255,255))
+        super().__init__(game, "enemie 6", (40,40))
         self.health = 1
         self.max_health = 1
         self.attack = 1
@@ -146,7 +146,7 @@ class ennemi3(Monster):
 
 class ennemi8(Monster):
     def __init__(self, game):
-        super().__init__(game, "enemie 7", (400,400), 130)
+        super().__init__(game, "enemie 7", (40,40), 130)
         self.health = 1
         self.max_health = 1
         self.attack = 4
@@ -155,7 +155,7 @@ class ennemi8(Monster):
 
 class ennemi7(Monster):
     def __init__(self, game):
-        super().__init__(game, "enemie 8", (255,255))
+        super().__init__(game, "enemie 8", (40,40))
         self.health = 1
         self.max_health = 1
         self.attack = 6
@@ -164,7 +164,7 @@ class ennemi7(Monster):
 
 class ennemi11(Monster):
     def __init__(self, game):
-        super().__init__(game, "enemie 1", (400,400), 130)
+        super().__init__(game, "enemie 1", (40,40), 130)
         self.health = 1
         self.max_health = 1
         self.attack = 10
@@ -173,7 +173,7 @@ class ennemi11(Monster):
 
 class ennemi10(Monster):
     def __init__(self, game):
-        super().__init__(game, "enemie 2", (255,255))
+        super().__init__(game, "enemie 2", (40,40))
         self.health = 1
         self.max_health = 1
         self.attack = 8
@@ -182,7 +182,7 @@ class ennemi10(Monster):
 
 class ennemi12(Monster):
     def __init__(self, game):
-        super().__init__(game, "enemie 3", (400,400), 130)
+        super().__init__(game, "enemie 3", (40,40), 130)
         self.health = 1
         self.max_health = 1
         self.attack = 6
@@ -192,7 +192,7 @@ class ennemi12(Monster):
 
 class bomb(Monster):
     def __init__(self, game):
-        super().__init__(game, "enemie 4", (255,255))
+        super().__init__(game, "enemie 4", (40,40))
         self.health = 1
         self.max_health = 1
         self.attack = 1

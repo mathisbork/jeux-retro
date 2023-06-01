@@ -10,23 +10,23 @@ FPS = 60
 
 #generer la fenetre de notre jeu
 pygame.display.set_caption("Shooter retro")
-screen = pygame.display.set_mode((1500,720))
+screen = pygame.display.set_mode((740,500))
 
 #importer de charger l'arrière plan de notre jeu
-background = pygame.image.load('assets/bg3.png')
+background = pygame.image.load('Assets1/fond.png')
 
 #importer notre bannière
-banner = pygame.image.load('assets/fond.png')
-banner_rect = banner.get_rect()
-banner_rect.x = math.ceil(screen.get_width() / 7)
-banner_rect.y = -50
+# banner = pygame.image.load('Assets1/fond.png')
+# banner_rect = banner.get_rect()
+# banner_rect.x = math.ceil(screen.get_width() / 7)
+# banner_rect.y = -50
 
 #charger notre bouton pour creer la partie
-play_button = pygame.image.load('assets/button.png')
-play_button = pygame.transform.scale(play_button, (450,200))
+play_button = pygame.image.load('Assets1/play_btn.png')
+play_button = pygame.transform.scale(play_button, (374,62))
 play_button_rect = play_button.get_rect()
-play_button_rect.x = math.ceil(screen.get_width() / 7) + 270
-play_button_rect.y = 420
+play_button_rect.x = 200
+play_button_rect.y = 220
 #charger notre jeu
 game = Game()
 
@@ -46,7 +46,7 @@ while running:
     #vérifier si notre n'as pas commencé
     else:
         #ajouter écran de bien venue
-        screen.blit(banner, (banner_rect))
+#         screen.blit(banner, (banner_rect))
         screen.blit(play_button, (play_button_rect))
 
     #mettre à jour l'ecran
@@ -89,5 +89,3 @@ while running:
 
     #fixer le nomvre de FPS
     clock.tick(FPS)
-
-

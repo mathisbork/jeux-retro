@@ -12,14 +12,8 @@ FPS = 60
 pygame.display.set_caption("Shooter retro")
 screen = pygame.display.set_mode((740,500))
 
-#importer de charger l'arrière plan de notre jeu
+# Charger l'arrière plan de notre jeu
 background = pygame.image.load('Assets1/fond.png')
-
-#importer notre bannière
-# banner = pygame.image.load('Assets1/fond.png')
-# banner_rect = banner.get_rect()
-# banner_rect.x = math.ceil(screen.get_width() / 7)
-# banner_rect.y = -50
 
 #charger notre bouton pour creer la partie
 play_button = pygame.image.load('Assets1/play_btn.png')

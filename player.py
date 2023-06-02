@@ -23,11 +23,7 @@ class Player(pygame.sprite.Sprite):
         self.image = pygame.transform.scale(self.image, (70,70))  # Redimensionner l'image
         self.rect = self.image.get_rect()
         self.rect.x = 250
-        self.rect.y = 300
-
-    # ...
-
-    # ...
+        self.rect.y = 400
 
     def damage(self, amount):
         if self.health - amount > amount:
@@ -46,7 +42,7 @@ class Player(pygame.sprite.Sprite):
         projectile = Projectile(self)
         self.all_projectiles.add(projectile)
         #jouer le son
-        self.game.sound_manager.play('pan')
+        self.game.Son_manager.play('pan')
 
     def move_right(self):
         #si le joueur n'est pas en collision avec un monstre et que il ne soit pas plus à droite que 670 pixel

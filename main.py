@@ -71,7 +71,7 @@ while running:
                    # mettre le jeu en mode lancé
                    game.start()
                    # jouer le son
-                   game.sound_manager.play('start')
+                   game.Son_manager.play('start')
 
         elif event.type == pygame.KEYUP:
             game.pressed[event.key] = False
@@ -83,8 +83,6 @@ while running:
             if play_button_rect.collidepoint(event.pos):
                 #mettre le jeu en mode lancé
                 game.start()
-                #jouer le son
-                game.sound_manager.play('start')
 
 
     #fixer le nomvre de FPS

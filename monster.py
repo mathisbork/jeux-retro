@@ -1,7 +1,9 @@
 import pygame
 import random
 import animation
-from sounds import SoundManager
+from Son import SonManager
+
+
 
 #creer une clase qui va gérer la notion de monstre sur notre jeu
 
@@ -61,19 +63,9 @@ class Monster(animation.AnimateSprite):
             self.game.add_score(self.loot_amount)
 
             #si la barre d'evenement est chargé au max
-            if self.game.comet_event.is_full_loaded():
+            if self.game.Respawn1.is_full_loaded():
                 #retirer du jeu
                 self.game.all_monsters.remove(self)
-                # appel de la Méthode pour déclancher la plus de comet
-                self.game.comet_event.attempt_fall()
-
-    def update_health_bar(self, surface):
-
-        #desiner notre bar de vie
-        pygame.draw.rect(surface, (60,63,60), [self.rect.x + 80, self.rect.y + 9, self.max_health, 6])
-        pygame.draw.rect(surface, (48, 236, 15), [self.rect.x + 80, self.rect.y + 9, self.health, 6])
-
-
 
     def forward(self):
         #le déplacement ne ce fait que si il n'y a pas de collision
@@ -100,32 +92,32 @@ class ennemi2(Monster):
         super().__init__(game, "enemie 2", (40,40))
         self.health = 1
         self.max_health = 1
-        self.attack = 3
+        self.attack = 1
         self.set_speed(1)
         self.set_loot_amount(10)
 
-class Boss(Monster):
+class ennemi3 (Monster):
     def __init__(self, game):
         super().__init__(game, "enemie 3", (40,40), 150)
         self.health = 1
         self.max_health = 1
-        self.attack = 3
+        self.attack = 1
         self.set_speed(1)
         self.set_loot_amount(40)
 
 
-class guard(Monster):
+class ennemi4 (Monster):
     def __init__(self, game):
         super().__init__(game, "enemie 4", (40,40))
         self.health = 1
         self.max_health = 1
-        self.attack = 2
+        self.attack = 1
         self.set_speed(1)
         self.set_loot_amount(30)
 
 
 
-class ennemi4(Monster):
+class ennemi5 (Monster):
     def __init__(self, game):
         super().__init__(game, "enemie 5", (40,40), 130)
         self.health = 1
@@ -135,7 +127,7 @@ class ennemi4(Monster):
         self.set_loot_amount(50)
 
 
-class ennemi3(Monster):
+class ennemi6 (Monster):
     def __init__(self, game):
         super().__init__(game, "enemie 6", (40,40))
         self.health = 1
@@ -144,53 +136,53 @@ class ennemi3(Monster):
         self.set_speed(1)
         self.set_loot_amount(20)
 
-class ennemi8(Monster):
+class ennemi7 (Monster):
     def __init__(self, game):
         super().__init__(game, "enemie 7", (40,40), 130)
         self.health = 1
         self.max_health = 1
-        self.attack = 4
+        self.attack = 1
         self.set_speed(2)
         self.set_loot_amount(80)
 
-class ennemi7(Monster):
+class ennemi8 (Monster):
     def __init__(self, game):
         super().__init__(game, "enemie 8", (40,40))
         self.health = 1
         self.max_health = 1
-        self.attack = 6
+        self.attack = 1
         self.set_speed(5)
         self.set_loot_amount(50)
 
-class ennemi11(Monster):
+class ennemi9 (Monster):
     def __init__(self, game):
         super().__init__(game, "enemie 1", (40,40), 130)
         self.health = 1
         self.max_health = 1
-        self.attack = 10
+        self.attack = 1
         self.set_speed(4)
         self.set_loot_amount(150)
 
-class ennemi10(Monster):
+class ennemi10 (Monster):
     def __init__(self, game):
         super().__init__(game, "enemie 2", (40,40))
         self.health = 1
         self.max_health = 1
-        self.attack = 8
+        self.attack = 1
         self.set_speed(5)
         self.set_loot_amount(80)
 
-class ennemi12(Monster):
+class ennemi11(Monster):
     def __init__(self, game):
         super().__init__(game, "enemie 3", (40,40), 130)
         self.health = 1
         self.max_health = 1
-        self.attack = 6
+        self.attack = 1
         self.set_speed(4)
         self.set_loot_amount(100)
 
 
-class bomb(Monster):
+class ennemi12(Monster):
     def __init__(self, game):
         super().__init__(game, "enemie 4", (40,40))
         self.health = 1
